@@ -229,9 +229,7 @@
   function hoverOver () {
     const menuItem = this.querySelector(".dropdown")
     this.classList.add("trigger-enter")
-    setTimeout(() => {
-      this.classList.add("trigger-enter-active")
-    }, 150)
+    setTimeout(() => this.classList.contains("trigger-enter") && this.classList.add("trigger-enter-active"), 150)
     backgrounDiv.style.left = `${menuItem.getBoundingClientRect().left}px`
     backgrounDiv.style.top = `${this.offsetHeight}px`
     backgrounDiv.style.width = `${menuItem.getBoundingClientRect().width}px`
